@@ -30,6 +30,7 @@ bool IsPrime(int x)
     }
     return true;
 }
+
 void p2()
 {
     srand((unsigned)time(NULL));
