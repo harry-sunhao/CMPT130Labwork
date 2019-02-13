@@ -17,7 +17,7 @@ bool isEven(int x)
 }
 void PrintIncreasingOrder(float x, float y, float z)
 {
-    float temp;
+    /*float temp;
     while(x>y||y>z||x>z)
     {
         if(x>y)
@@ -40,9 +40,22 @@ void PrintIncreasingOrder(float x, float y, float z)
         }
     }
 
-   cout<<x<<" "<<y<<" "<<z<<endl;
-
+   cout<<x<<" "<<y<<" "<<z<<endl;*/
+//version 2
+if(x<y&&y<Z)
+    cout<<x<<", "<<y<<", "<<z<<endl;
+else if(x<z&&z<y)
+    cout<<x<<", "<<z<<", "<<y<<endl;
+else if(y<x&&x<z)
+    cout<<y<<", "<<x<<", "<<z<<endl;
+else if(y<z&&z<x)
+    cout<<y<<", "<<z<<", "<<x<<endl;
+else if(z<x&&x<y)
+    cout<<z<<", "<<x<<", "<<y<<endl;
+else if(z<y&&y<x)
+    cout<<z<<", "<<y<<", "<<x<<endl;
 }
+
 bool isDigit(char x)
 {
     return x>=48&&x<=57;
