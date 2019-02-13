@@ -103,7 +103,7 @@ void reversedInterger(int n)
     }
     n=num;
     num=0;
-    for (int i = sum-1; i >=0 ; --i)
+    for (int i = sum; i >=0 ; --i)
     {
 
         num+=pow(10,i)*(n%10);
