@@ -529,6 +529,120 @@ void P36()
     cout<<"No alphabet found in the array"<<endl;
     return;
 }
+bool isIncreasing(int a[],int size)
+{
+    for (int i = 1; i < size; ++i) {
+        if(a[i-1]>a[i])
+            return false;
+    }
+    return true;
+}
+/*
+ * C++ Strings
+ */
+string randomName()
+{
+    srand((unsigned)time(NULL));
+    int count,a,b;
+    string s;
+    a=65;
+    b=90;
+    count=b-a+1;
+    s=rand()%count+a;
+    a=97;
+    b=122;
+    count=b-a+1;
+
+    for (int i = 1; i < 10; ++i) {
+        char c=rand()%count+a;
+        s=s+c;
+    }
+    return s;
+}
+bool isFound(string s,char c)
+{
+    for (int i = 0; i < s.length(); ++i) {
+        if(s[i]==c)
+            return true;
+    }
+    return false;
+}
+int vowelCounter(string s)
+{
+    int count=0;
+    char c[5]={'a','e','i','o','u'};
+    for (int i = 0; i < s.length(); ++i) {
+        for (int j = 0; j < 5; ++j) {
+            if(s[i]==c[j])
+            {
+                count++;
+                break;
+            }
+        }
+    }
+    return count;
+}
+int countCharacter(string s, char c)
+{
+    int count=0;
+    for (int i = 0; i < s.length(); ++i) {
+        if(s[i]==c)
+            count++;
+    }
+    return count;
+}
+bool isDistinct(string s)
+{
+    for (int i = 0; i < s.length(); ++i) {
+        for (int j = i+1; j < s.length(); ++j) {
+            cout<<i<<" , "<<j<<endl;
+            if(s[i]==s[j])
+                return false;
+        }
+
+    }
+    return true;
+}
+int countCharacterFromIndex(string s,char c, int index)
+{
+    int count=0;
+    for (int i = index; i < s.length(); ++i) {
+        if(s[i]==c)
+            count++;
+    }
+    return count;
+}
+int countCommonChars(string s1,string s2)
+{
+    int count=0;
+    string s="";
+
+    for (int i = 0; i < s2.length(); ++i) {
+        for (int j = 0; j < s1.length(); ++j) {
+            bool b=false;
+            if(s1[i]==s2[j])
+            {
+                //count++;
+                //break;
+                for (int k = 0; k < s.length(); ++k) {
+
+                    b=s1[i]==s[k];
+                    cout<<s1[i]<<" "<<s[k]<<" "<<b<<endl;
+
+                }
+                if(b==false)
+                {
+                    s=s+s1[i];
+                    cout<<boolalpha<<b<<" "<<s<<endl;
+                    count++;
+                    //break;
+                }
+
+            }
+        }
+    }
+    return count;
+}
 int main()
 {
 
