@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
+#include<string>
 
 using namespace std;
 /*
@@ -642,6 +643,49 @@ int countCommonChars(string s1,string s2)
         }
     }
     return count;
+}
+void Q48()
+{
+	string a[]={"Ninety","Eighty","Seventy","Sixty","Fifty","Fourty","Thirty","Twenty"};
+	string b[]={"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
+	string c[]={"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+	string d[]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+	string num1="";
+	string num2="";
+	string other="";
+	string arr_other[]={" bottles of beer on the wall,"," bottle of beer on the wall, "," bottles of beer, "," bottle of beer, "};
+
+
+	for(int i=0;i<=9;i++)
+	{
+		for(int j= 9;j>=0;j--)
+		{
+			int k=1;
+			//cout<<i<<" "<<j<<" "<<k<<endl;
+			if(i<8)
+			{
+				num1=a[i];
+				num2="-"+d[j];
+				k=0;
+			}
+			else if(i==9)
+			{
+				num1="";
+				num2=c[j];
+				k=1;
+			}
+			else if(i==8)
+			{
+				//j=9;
+				num1="";
+				num2=b[j];
+				k=0;
+			}
+			if(j==0&&i<8)
+				num2="";
+			cout<<num1+num2+arr_other[k]<<endl<<num1+num2+arr_other[k+2]<<endl<<"Take one down, pass it around, "<<endl;
+		}
+	}
 }
 int main()
 {
