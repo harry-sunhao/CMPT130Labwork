@@ -1,0 +1,50 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+
+using namespace std;
+
+void fillArray(int A1[],int size_1,int A2[],int size_2,int A3[],int size_3)
+{
+	int i=0;
+	for(int j=size_1-1;j>=0;j--)
+	{
+		A3[i]=A1[j];
+		i++;
+		if(i>=size_3)
+			break;
+	}
+	for(int j=size_2-1;j>=0;j--)
+	{
+		A3[i]=A2[j];
+		i++;
+		if(i>=size_3)
+			break;
+	}
+	return;
+}
+int main()
+{
+	int A1[5]={22,8,30,9,9};
+	int A2[8]={29,17,16,19,21,20,7,6};
+	int A3[13]={};
+	fillArray(A1,5,A2,8,A3,10);
+	for(int i=0;i<13;i++)
+	{
+		cout<<A3[i]<<" ";
+	}
+	cout<<endl<<endl;
+	fillArray(A1,5,A2,8,A3,13);
+	for(int i=0;i<13;i++)
+	{
+		cout<<A3[i]<<" ";
+	}
+	cout<<endl<<endl;
+	fillArray(A2,8,A1,5,A3,13);
+	for(int i=0;i<13;i++)
+	{
+		cout<<A3[i]<<" ";
+	}
+	system("Pause");
+	return 0;
+}
