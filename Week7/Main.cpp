@@ -616,28 +616,34 @@ int countCharacterFromIndex(string s,char c, int index)
 int countCommonChars(string s1,string s2)
 {
     int count=0;
-    string s="";
-
+    string s = "";
+	bool b=false;
     for (int i = 0; i < s2.length(); ++i) {
         for (int j = 0; j < s1.length(); ++j) {
-            bool b=false;
-            if(s1[i]==s2[j])
-            {
+            
+           // cout <<"s2["<<i<<"]: "<< s2[i] << " s1[" <<j<<"]: "<< s1[j]<<endl;
+			if (s2[i] == s1[j]) {
                 //count++;
                 //break;
+
                 for (int k = 0; k < s.length(); ++k) {
-
-                    b=s1[i]==s[k];
-                    cout<<s1[i]<<" "<<s[k]<<" "<<b<<endl;
-
+                    //cout<<"s["<<k<<"]: "<<s[k]<<" ";
+					if(s1[j] == s[k])
+					{
+							b=true;
+							break;
+					}
+					
                 }
-                if(b==false)
-                {
-                    s=s+s1[i];
-                    cout<<boolalpha<<b<<" "<<s<<endl;
-                    count++;
+				//cout<<endl;
+                if (b == false) {
+                    s = s + s1[j];
+                   // cout << boolalpha << b << " " << s << endl;
+					count++;
                     //break;
                 }
+				else
+					b=false;
 
             }
         }
@@ -645,27 +651,34 @@ int countCommonChars(string s1,string s2)
     return count;
 }
 string commonCharsString(string s1,string s2) {
-    int count = 0;
     string s = "";
-
+	bool b=false;
     for (int i = 0; i < s2.length(); ++i) {
         for (int j = 0; j < s1.length(); ++j) {
-            bool b = false;
-            if (s1[i] == s2[j]) {
+            
+           // cout <<"s2["<<i<<"]: "<< s2[i] << " s1[" <<j<<"]: "<< s1[j]<<endl;
+			if (s2[i] == s1[j]) {
                 //count++;
                 //break;
+
                 for (int k = 0; k < s.length(); ++k) {
-
-                    b = s1[i] == s[k];
-                    cout << s1[i] << " " << s[k] << " " << b << endl;
-
+                    //cout<<"s["<<k<<"]: "<<s[k]<<" ";
+					if(s1[j] == s[k])
+					{
+							b=true;
+							break;
+					}
+					
                 }
+				//cout<<endl;
                 if (b == false) {
-                    s = s + s1[i];
-                    cout << boolalpha << b << " " << s << endl;
-                    count++;
+                    s = s + s1[j];
+                    //cout << boolalpha << b << " " << s << endl;
+					
                     //break;
                 }
+				else
+					b=false;
 
             }
         }
