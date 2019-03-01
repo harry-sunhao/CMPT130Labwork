@@ -644,6 +644,71 @@ int countCommonChars(string s1,string s2)
     }
     return count;
 }
+string commonCharsString(string s1,string s2) {
+    int count = 0;
+    string s = "";
+
+    for (int i = 0; i < s2.length(); ++i) {
+        for (int j = 0; j < s1.length(); ++j) {
+            bool b = false;
+            if (s1[i] == s2[j]) {
+                //count++;
+                //break;
+                for (int k = 0; k < s.length(); ++k) {
+
+                    b = s1[i] == s[k];
+                    cout << s1[i] << " " << s[k] << " " << b << endl;
+
+                }
+                if (b == false) {
+                    s = s + s1[i];
+                    cout << boolalpha << b << " " << s << endl;
+                    count++;
+                    //break;
+                }
+
+            }
+        }
+    }
+    return s;
+}
+bool increasingOrderStrings(string s[],int size)
+{
+    for (int j = 0; j < size; ++j) {
+        for (int i = j; i < size; ++i) {
+            if(s[j]>s[i])
+            {
+                return false;
+            }
+        }
+
+    }
+    return true;
+}
+void Q46()
+{
+    string s[5];
+    for (int i = 0; i < 5; ++i) {
+        s[i]=randomName();
+        cout<<s[i]<<endl;
+    }
+    for (int j = 0; j < 5; ++j) {
+        for (int i = j; i < 5; ++i) {
+            if(s[j]>s[i])
+            {
+                string temp=s[i];
+                s[i]=s[j];
+                s[j]=temp;
+            }
+        }
+
+    }
+    cout<<endl<<endl;
+    for (int i = 0; i < 5; ++i) {
+        cout<<s[i]<<endl;
+    }
+    cout<<increasingOrderStrings(s,5)<<endl;
+}
 void Q48()
 {
 	string a[]={"Ninety","Eighty","Seventy","Sixty","Fifty","Fourty","Thirty","Twenty"};
