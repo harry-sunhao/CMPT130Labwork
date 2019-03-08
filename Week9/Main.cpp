@@ -290,6 +290,7 @@ int Q16()
     int x = 5;
     int y = foo_Q16(&x);
     cout << x << ", " << y << endl;
+    //7, 7
     return 0;
 }
 int Q17()
@@ -297,6 +298,7 @@ int Q17()
     int x = 5;
     int& y = foo_Q16(&x);
     cout << x << ", " << y << endl;
+    //7, 7
     return 0;
 }
 int main()
