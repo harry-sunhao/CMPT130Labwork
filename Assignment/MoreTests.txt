@@ -1,0 +1,247 @@
+10Enter positive integer for the bit pattern size 10
+Enter an integer a 35
+Enter an integer b 22
+In decimal 35 + 22 is 57
+The two's complement of 35 is    0000100011
+The two's complement of 22 is    0000010110
+The binary sum of 0000100011 and 0000010110 is 0000111001
+In two's complement arithmetic, 35 + 22 is 57
+57 is equal to 57. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 3
+Enter an integer a 30
+Enter an integer b 19
+In decimal 30 + 19 is 49
+The two's complement of 30 is    110
+The two's complement of 19 is    011
+The binary sum of 110 and 011 is 001
+In two's complement arithmetic, 30 + 19 is 1
+49 is not equal to 1
+Either 49 cannot be represented by the given bit pattern OR we have made a mistake!
+
+
+
+Enter positive integer for the bit pattern size 7
+Enter an integer a 18
+Enter an integer b 46
+In decimal 18 + 46 is 64
+The two's complement of 18 is    0010010
+The two's complement of 46 is    0101110
+The binary sum of 0010010 and 0101110 is 1000000
+In two's complement arithmetic, 18 + 46 is -64
+64 is not equal to -64
+Either 64 cannot be represented by the given bit pattern OR we have made a mistake!
+
+
+
+Enter positive integer for the bit pattern size 2
+Enter an integer a -1
+Enter an integer b 17
+In decimal -1 + 17 is 16
+The two's complement of -1 is    11
+The two's complement of 17 is    01
+The binary sum of 11 and 01 is 00
+In two's complement arithmetic, -1 + 17 is 0
+16 is not equal to 0
+Either 16 cannot be represented by the given bit pattern OR we have made a mistake!
+
+
+
+Enter positive integer for the bit pattern size 7
+Enter an integer a 11
+Enter an integer b 13
+In decimal 11 + 13 is 24
+The two's complement of 11 is    0001011
+The two's complement of 13 is    0001101
+The binary sum of 0001011 and 0001101 is 0011000
+In two's complement arithmetic, 11 + 13 is 24
+24 is equal to 24. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 9
+Enter an integer a 16
+Enter an integer b -26
+In decimal 16 + -26 is -10
+The two's complement of 16 is    000010000
+The two's complement of -26 is   111100110
+The binary sum of 000010000 and 111100110 is 111110110
+In two's complement arithmetic, 16 + -26 is -10
+-10 is equal to -10. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 11
+Enter an integer a 33
+Enter an integer b 21
+In decimal 33 + 21 is 54
+The two's complement of 33 is    00000100001
+The two's complement of 21 is    00000010101
+The binary sum of 00000100001 and 00000010101 is 00000110110
+In two's complement arithmetic, 33 + 21 is 54
+54 is equal to 54. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 9
+Enter an integer a 14
+Enter an integer b 2
+In decimal 14 + 2 is 16
+The two's complement of 14 is    000001110
+The two's complement of 2 is     000000010
+The binary sum of 000001110 and 000000010 is 000010000
+In two's complement arithmetic, 14 + 2 is 16
+16 is equal to 16. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 8
+Enter an integer a 10
+Enter an integer b -1
+In decimal 10 + -1 is 9
+The two's complement of 10 is    00001010
+The two's complement of -1 is    11111111
+The binary sum of 00001010 and 11111111 is 00001001
+In two's complement arithmetic, 10 + -1 is 9
+9 is equal to 9. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 7
+Enter an integer a -27
+Enter an integer b 49
+In decimal -27 + 49 is 22
+The two's complement of -27 is   1100101
+The two's complement of 49 is    0110001
+The binary sum of 1100101 and 0110001 is 0010110
+In two's complement arithmetic, -27 + 49 is 22
+22 is equal to 22. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 4
+Enter an integer a -39
+Enter an integer b -25
+In decimal -39 + -25 is -64
+The two's complement of -39 is   1001
+The two's complement of -25 is   0111
+The binary sum of 1001 and 0111 is 0000
+In two's complement arithmetic, -39 + -25 is 0
+-64 is not equal to 0
+Either -64 cannot be represented by the given bit pattern OR we have made a mistake!
+
+
+
+Enter positive integer for the bit pattern size 12
+Enter an integer a 1
+Enter an integer b -35
+In decimal 1 + -35 is -34
+The two's complement of 1 is     000000000001
+The two's complement of -35 is   111111011101
+The binary sum of 000000000001 and 111111011101 is 111111011110
+In two's complement arithmetic, 1 + -35 is -34
+-34 is equal to -34. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 6
+Enter an integer a -11
+Enter an integer b 17
+In decimal -11 + 17 is 6
+The two's complement of -11 is   110101
+The two's complement of 17 is    010001
+The binary sum of 110101 and 010001 is 000110
+In two's complement arithmetic, -11 + 17 is 6
+6 is equal to 6. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 7
+Enter an integer a -31
+Enter an integer b 26
+In decimal -31 + 26 is -5
+The two's complement of -31 is   1100001
+The two's complement of 26 is    0011010
+The binary sum of 1100001 and 0011010 is 1111011
+In two's complement arithmetic, -31 + 26 is -5
+-5 is equal to -5. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 7
+Enter an integer a -17
+Enter an integer b 49
+In decimal -17 + 49 is 32
+The two's complement of -17 is   1101111
+The two's complement of 49 is    0110001
+The binary sum of 1101111 and 0110001 is 0100000
+In two's complement arithmetic, -17 + 49 is 32
+32 is equal to 32. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 2
+Enter an integer a 42
+Enter an integer b -15
+In decimal 42 + -15 is 27
+The two's complement of 42 is    10
+The two's complement of -15 is   01
+The binary sum of 10 and 01 is 11
+In two's complement arithmetic, 42 + -15 is -1
+27 is not equal to -1
+Either 27 cannot be represented by the given bit pattern OR we have made a mistake!
+
+
+
+Enter positive integer for the bit pattern size 7
+Enter an integer a -50
+Enter an integer b 45
+In decimal -50 + 45 is -5
+The two's complement of -50 is   1001110
+The two's complement of 45 is    0101101
+The binary sum of 1001110 and 0101101 is 1111011
+In two's complement arithmetic, -50 + 45 is -5
+-5 is equal to -5. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 3
+Enter an integer a -11
+Enter an integer b -17
+In decimal -11 + -17 is -28
+The two's complement of -11 is   101
+The two's complement of -17 is   111
+The binary sum of 101 and 111 is 100
+In two's complement arithmetic, -11 + -17 is -4
+-28 is not equal to -4
+Either -28 cannot be represented by the given bit pattern OR we have made a mistake!
+
+
+
+Enter positive integer for the bit pattern size 8
+Enter an integer a -18
+Enter an integer b -13
+In decimal -18 + -13 is -31
+The two's complement of -18 is   11101110
+The two's complement of -13 is   11110011
+The binary sum of 11101110 and 11110011 is 11100001
+In two's complement arithmetic, -18 + -13 is -31
+-31 is equal to -31. Good Job!
+
+
+
+Enter positive integer for the bit pattern size 8
+Enter an integer a 7
+Enter an integer b 21
+In decimal 7 + 21 is 28
+The two's complement of 7 is     00000111
+The two's complement of 21 is    00010101
+The binary sum of 00000111 and 00010101 is 00011100
+In two's complement arithmetic, 7 + 21 is 28
+28 is equal to 28. Good Job!
+
+
+
+Press any key to continue . . .
