@@ -14,6 +14,50 @@ int stringLength(char A[])
     }
     return index;
 }
+char* combine(char C1[],char C2[])
+{
+
+	int len1=stringLength(C1);
+	int len2=stringLength(C2);
+	char *C3 =new char[len1+len2+1];
+	for(int i=0;i<len1;i++)
+		C3[i]=C1[i];
+	for(int i=0;i<len2;i++)
+		C3[len1+i]=C2[i];
+	C3[len1+len2]='\0';
+	return C3;
+
+}
+
+int Test_Q2()
+{
+
+	//Create a C-string
+	const int len1 = rand() % 10 + 4;
+	char *C1 = new char[len1 + 1];
+	for (int i = 0; i < len1; i++)
+	C1[i] = rand() % 26 + 97;
+	C1[len1] = '\0';
+	//Create a second C-string
+	const int len2 = rand() % 10 + 6;
+	char *C2 = new char[len2 + 1];
+	for (int i = 0; i < len2; i++)
+		C2[i] = rand() % 26 + 65;
+	C2[len2] = '\0';
+	//Print the two C-strings
+	cout << "C1 = " << C1 << endl;
+	cout << "C2 = " << C2 << endl;
+	//Combine C1 and C2 to a new C-string C3
+	char *C3 = combine(C1, C2);
+	//Print the answer
+	cout << C1 << " and " << C2 << " combined together give " << C3 << endl;
+	//Delete the dynamic arrays
+	delete[] C1; 
+	delete[] C2; 
+	delete[] C3;
+	system("Pause");
+	return 0;
+}
 int Q2_findCharacter(char A[],char x)
 {
     int index=0;
@@ -363,7 +407,8 @@ void Q29_TestQ28()
 void Q30_stringCopy(char s1[],char s2[])
 {
     int s1_len=stringLength(s1),s2_len=stringLength(s2),i=0;
-    if(s2>=s1)
+	cout<<s2_len<<", "<<s1_len<<endl;
+    if(s2_len>=s1_len)
     {
         while (s1[i]!='\0')
         {
@@ -372,46 +417,58 @@ void Q30_stringCopy(char s1[],char s2[])
         }
         s2[i]='\0';
     }
+	else
+		return;
 }
 void Test_Q30()
 {
     char S1[]="BLABLABLABLA";
     int len=stringLength(S1);
     cout<<"The C-string S1 is"<<S1<<endl;
-    cout<<"The length is "<<len<<endl;
+    cout<<"The length of S1 is "<<len<<endl;
     cout<<"Test 1. S2 < S1"<<endl<<endl;
     char *s2=new char[3];
     for (int i = 0; i < 2; ++i) {
         s2[i]='A';
     }
     s2[2]='\0';
-    cout<<"The C-string S2 is"<<s2<<endl;
+    cout<<"Originally, The C-string S2 is"<<s2<<endl;
     Q30_stringCopy(S1,s2);
     cout<<"After, The C-string S2 is"<<s2<<endl;
-
-
-    delete[](s2);
+	cout<<"The length of Ss is "<<stringLength(s2)<<endl;
+    delete[] s2;
 
     cout<<"Test 2. S2 = S1"<<endl<<endl;
     s2=new char[len+1];
     for (int i = 0; i < len; ++i) {
         s2[i]='A';
     }
-    s2[2]='\0';
-    cout<<"The C-string S2 is"<<s2<<endl;
+    s2[len]='\0';
+    cout<<"Originally, The C-string S2 is"<<s2<<endl;
     Q30_stringCopy(S1,s2);
     cout<<"After, The C-string S2 is"<<s2<<endl;
-    delete[](s2);
+	cout<<"The length of Ss is "<<stringLength(s2)<<endl;
+    delete[] s2;
 
+	cout<<"Test 3 s2>s1"<<endl<<endl;
+	int len2=len+10;
+	s2=new char[len2+1];
+	for (int i = 0; i < len2; ++i) {
+        s2[i]='A';
+    }
+	s2[len]='\0';
+	 cout<<"Originally, The C-string S2 is"<<s2<<", and its length is "<<stringLength(s2)<<endl;
+    Q30_stringCopy(S1,s2);
+    cout<<"After, The C-string S2 is"<<s2<<endl;
+	cout<<"The length of Ss is "<<stringLength(s2)<<endl;
+    delete[] s2;
 }
 int main()
 {
-    Test_Q30();
+	Test_Q2();
+    //Test_Q30();
 
     srand(time(0));
-    char a[]="massachussettes";
-    char* b=Q27_getDistinctChars(a);
-    cout<<b<<endl;
-    delete []b;
+	system("Pause");
     return 0;
 }
