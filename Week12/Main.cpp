@@ -66,6 +66,7 @@ bool Q4(char A[],char B[])//sort A and B
 		return true;
 	return false;
 }
+
 int main()
 {
 	system("Pause");
