@@ -230,9 +230,13 @@ int *Q10(int n)
             }
         }
     }
+    /**
     insertionsort(arr,n);
     printarr(arr,n);
     delete []arr;
+    **/
+    //just a Test code
+    return arr;
 }
 
 int Q11_c_str_sequentialSearch(char A[],char x)
