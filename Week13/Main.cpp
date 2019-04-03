@@ -176,9 +176,87 @@ void Q9()
     20 is not found in the array.
    */
 }
+void Q10(int n)
+{
+    if(n==0)
+        return;
+    else
+    {
+        cout<<"* ";
+        Q10(n-1);
+    }
+
+}
+void Q11(int n)
+{
+    if(n==1)
+        cout<<"1 "<<endl;
+    else
+    {
+        cout<<n<<" ";
+        Q11(n-1);
+    }
+
+}
+void Q12(int n)
+{
+    if(n==1)
+        cout<<"1 ";
+    else
+    {
+
+        Q12(n-1);
+        cout<<n<<" ";
+    }
+}
+int Q13_recursiveSum(int n)
+{
+    int sum;
+    if(n==1)
+        sum= 1;
+    else
+    {
+        sum=n+Q13_recursiveSum(n-1);
+    }
+    return sum;
+
+}
+int Q14_recursiveSumDifficult(int n)
+{
+    int sum;
+    if(n==1)
+        sum= 1;
+    else
+    {
+        int num=Q14_recursiveSumDifficult(n-1);
+        sum=n+num;
+    }
+    return sum;
+}
+void Q15(int n)
+{
+    if(n==0)
+        return;
+    else
+    {
+        cout<<n%10;
+        Q15(n/10);
+    }
+}
+int Q16(int x,int y)
+{
+    int sum=1;
+    if(y==0)
+        return 1;
+    else
+    {
+        sum=x*Q16(x,y-1);
+    }
+    return sum;
+}
 int main()
 {
-    Q8();
-    system("Pause");
+    cout<<Q16(2,3);
+   // system("Pause");
     return 0;
 }
