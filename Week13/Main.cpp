@@ -235,12 +235,14 @@ int Q14_recursiveSumDifficult(int n)
 }
 void Q15(int n)
 {
-    if(n==0)
-        return;
+	bool a=true;
+    if(n==0&&a==true)
+		cout<<"0";
     else
     {
         cout<<n%10;
         Q15(n/10);
+		a=false;
     }
 }
 int Q16(int x,int y)
@@ -254,9 +256,179 @@ int Q16(int x,int y)
     }
     return sum;
 }
+int Q17(int n)
+{
+	int sum=0;
+	if(n==0)
+		sum=0;
+	else if(n<0)
+	{
+		sum=n*n+Q17(n+1);
+	}
+	else if(n>0)
+	{
+		sum=n*n+Q17(n-1);
+	}
+	return sum;
+}
+int fib(int x)
+{
+	if((x==1)||(x==0)) 
+	{
+      return(x);
+	}
+	else 
+	{
+      return(fib(x-1)+fib(x-2));
+	}
+}
+void Q18()
+{
+	cout<<"Input a number"<<endl;
+	int x;
+	cin>>x;
+	fib(x);
+
+}
+int fib_19(int n) 
+{ 
+  
+  int *f=new int [n];
+  int i; 
+  
+  /* 0th and 1st number of the series are 0 and 1*/
+  f[0] = 0; 
+  f[1] = 1; 
+  
+  for (i = 2; i <= n; i++) 
+  { 
+      /* Add the previous 2 numbers in the series 
+         and store it */
+      f[i] = f[i-1] + f[i-2]; 
+  } 
+  int num=f[n];
+  delete []f;
+  return num; 
+} 
+void Q19()
+{
+	cout<<"Input a number"<<endl;
+	int x;
+	cin>>x;
+	fib_19(x);
+}
+int Q21(int m, int n)
+{
+	if(m==0)
+		return n+1;
+	else if(m>0&&n==0)
+		return Q21(m-1,1);
+	else if(m>0&&n>0)
+		return Q21(m-1,Q21(m,n-1));
+}
+bool seqSearch(const char A[], const int startIndex, const char searchValue)
+{
+	int index=startIndex;
+    while(A[index]!='\0')
+    {
+        if(A[index]==searchValue)
+            return true;
+        index++;
+    }
+    return false;
+}
+void Q22()
+{
+	char a[]="abcde1fg";
+	bool ans=seqSearch(a,2,'1');
+	cout<<ans<<endl;
+}
+bool cStringBinarySearch(char a[],int startIndex,int lastIndex,char item)
+{
+    
+    while(startIndex<=lastIndex)
+    {
+        int midIndex=(startIndex+lastIndex)/2;
+        int Guess=a[midIndex];
+        if(Guess==item)
+        {
+            return true;
+        }
+        else if(Guess>item)
+            lastIndex=midIndex-1;
+        else if(Guess<item)
+            startIndex=midIndex+1;
+    }
+    return false;
+}
+void Q23()
+{
+	char a[]="abcdefghi";
+	bool ans=cStringBinarySearch(a,0,9,'1');
+	cout<<ans<<endl;
+}
+void recursiveBubbleSort()
+{
+
+}
+int factorial(int n)
+{
+	if(n==0||n==1)
+		return 1;
+	else
+		return n*factorial(n-1);
+}
+void printVertial(int n)
+{
+	if(n<10)
+		cout<<n<<endl;
+	else
+	{
+		int num=n,count=0;
+		while(n>0)
+		{
+			n=n/10;
+			count++;
+		}
+		count--;
+		n=num;
+		while(n>0)
+		{
+			int x=pow(10.0,count*1.0);
+			cout<<n/x<<endl;
+			n=n%x;
+			count--;
+		}
+	}
+	/*
+	if(n==0)
+		cout<<n<<endl;
+	else
+	{
+		int k=log10(1.0*n);
+		int m=pow(10.0,k);
+		do
+		{
+			cout<<n/m<<endl;
+			n=n%m;
+			m=m/10;
+		}while(m>0);
+	}
+	*/
+}
+void re_printVertial(int n)
+{
+	if(n<10)
+		cout<<n<<endl;
+	else
+	{
+		re_printVertial(n/10);
+		cout<<n%10<<endl;
+	}
+}
 int main()
 {
-    cout<<Q16(2,3);
-   // system("Pause");
+
+	system("Pause");
     return 0;
 }
