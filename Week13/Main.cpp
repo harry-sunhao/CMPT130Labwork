@@ -426,6 +426,20 @@ void re_printVertial(int n)
 		cout<<n%10<<endl;
 	}
 }
+void recursiveBubbleSort(int[] arr, int first, int last){
+
+    if(first < last && last > 0){
+        if(arr[first] > arr[first+1]){
+            int temp = arr[first];
+            arr[first] = arr[first+1];
+            arr[first+1] = temp;
+        }
+        recursiveBubbleSort(arr, first+1, last);
+        recursiveBubbleSort(arr, first, last-1);
+    }
+    else
+        return;
+}
 int main()
 {
 
